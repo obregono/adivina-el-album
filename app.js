@@ -12,7 +12,7 @@ async function buscarCancion() {
     mensajeDiv.innerText = "Buscando en tu API de Python... ⏳";
 
     try {
-        const respuesta = await fetch(`https://api-adivina-album.onrender.com/api/juego/${artista}`);
+        const respuesta = await fetch(`https://adivina-el-album.onrender.com/api/juego/${artista}`);
 
         if (!respuesta.ok) {
             throw new Error("No se encontraron canciones para jugar.");
