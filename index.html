@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Álbum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🎧 Adivina el Álbum</h1>
+
+        <div id="fase-busqueda">
+            <p>Escribe un artista para empezar a jugar:</p>
+            <input type="text" id="input-artista" placeholder="Ej. The Weekend, Rosalía...">
+            <button onclick="buscarCancion()">Buscar y Jugar</button>
+        </div>
+
+        <div id="fase-juego" style="display: none;">
+            <p>¿De qué álbum es esta canción?</p>
+            <h2 id="titulo-cancion">Cargando...</h2>
+            <p>Por: <span id="nombre-artista">...</span></p>
+
+            <img id="portada-album" src="" alt="Portada oculta">
+
+            <input type="text" id="input-adivinanza" placeholder="Escribe el nombre del álbum">
+            <button onclick="comprobarRespuesta()">¡Adivinar!</button>
+            <button onclick="reiniciarJuego()" class="secondary">Probar otro artista</button>
+        </div>
+
+        <p id="mensaje"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
